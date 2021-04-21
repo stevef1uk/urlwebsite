@@ -42,18 +42,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>To use this service you first need to request an API key which can be done as follows:</p>
 <code>
    curl -d '{"email": "your-valid-email-address" }' https://url.sjfisher.com/getkey
-  
-This returns: 
+</code>
+<p> This returns: 
   Record created
 {"key": " key-value " }
-{"Notice": "Please check for email and activate before using the key" }
-</code>
+  {"Notice": "Please check for email and activate before using the key" } </p>
 <p>Then your will receive an email that you need to click on the link in order to activate the returned API key</p>
 <p>To create a short URL you need to do the following:</p>
 <code>
     curl -d '{"Shorturl": "your-short-id", "From": "YYYY-MM-DDTHH:MM:SS+00:00", "Longurl": "the-target-url", "To": "YYYY-MM-DDTHH:MM:SS+00:00", "Defaulturl": "default-url"}' -H "Content-Type: application/json" -H "X-Api-Key: your-api-key" -v -X POST https://url.sjfisher.com
-  
-    example:
+</code>
+<p>example:</p>
+<code>
       curl -d '{"Shorturl": "steve", "From": "2020-12-31T00:00:00+00:00", "Longurl": "http://topgear.com", "To": "2021-12-31T00:00:00+00:00", "Defaulturl": "http://google.com"}' -H "Content-Type: application/json" -H "X-Api-Key: blkkuyjewpxr" -v -X POST https://url.sjfisher.com 
 </code>
 <p>To access the short url use:</p>
