@@ -56,10 +56,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <code>
       curl -d '{"Shorturl": "steve", "From": "2020-12-31T00:00:00+00:00", "Longurl": "http://topgear.com", "To": "2021-12-31T00:00:00+00:00", "Defaulturl": "http://google.com"}' -H "Content-Type: application/json" -H "X-Api-Key: blkkuyjewpxr" -v -X POST https://url.sjfisher.com 
 </code>
-<p>To access the short url use:</p>
+  <p>Please note that in the free tier (the defaut) the <b>Shorturl</b> has been converted into an Md5 hash and that value is returned</p>
+  <p>To access the short url use:</p>
 <code>
-    https://url.sjfisher.com?steve
+    https://url.sjfisher.com?steve if on a paid tier or https://url.sjfisher.com?d41d8cd98f00b204e9800998ecf8427e if not
 </code>
+<p>Note: the d41d8cd98f00b204e9800998ecf8427e is the Md5 hash of steve and you will need to use the Md5 value returned for you</p>
   
 <p>Outside of the <b>From</b> and <b>To</b> date and time periods the <b>Defaulturl</b> URL will be the redirect target. The <b>Shorturl</b> URL will only active within the To and From period</p>
 
