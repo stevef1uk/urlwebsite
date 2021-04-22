@@ -47,7 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   Record created
 {"key": " key-value " }
   {"Notice": "Please check for email and activate before using the key" } </p>
-<p>Then your will receive an email that you need to click on the link in order to activate the returned API key</p>
+<p>Then you will receive an email that you need to click on the link in order to activate the returned API key</p>
 <p>To create a short URL you need to do the following:</p>
 <code>
     curl -d '{"Shorturl": "your-short-id", "From": "YYYY-MM-DDTHH:MM:SS+00:00", "Longurl": "the-target-url", "To": "YYYY-MM-DDTHH:MM:SS+00:00", "Defaulturl": "default-url"}' -H "Content-Type: application/json" -H "X-Api-Key: your-api-key" -v -X POST https://url.sjfisher.com
@@ -63,13 +63,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>Please note that in the free tier (the defaut) the <b>Shorturl</b> has been converted into an Md5 hash and that value is returned</p>
   <p>To access the short url use:</p>
 <code>
-    https://url.sjfisher.com?steve if on a paid tier or https://url.sjfisher.com?d41d8cd98f00b204e9800998ecf8427e if not
+    https://url.sjfisher.com?steve if on an elevated tier (email me for this) or https://url.sjfisher.com?d41d8cd98f00b204e9800998ecf8427e if not
 </code>
 <p>Note: the d41d8cd98f00b204e9800998ecf8427e is the Md5 hash of steve and you will need to use the Md5 value returned for you</p>
   
 <p>Outside of the <b>From</b> and <b>To</b> date and time periods the <b>Defaulturl</b> URL will be the redirect target. The <b>Shorturl</b> URL will only active within the To and From period</p>
 
 <p>I have set a limit per email address of 100 record or updates</p>
+<p>As there is a uniqueness test on the short url your pass (even if it is turned into the Md5 hash) you may get an error response</p>
+<p>There is also a profanity filter on the short url</p>
+<p>Keys have a life of about a month bit when expired you can request another as shown above</p>
+<p>For the free tier the live duration of a record you have addeded is also one month, this can be changed if you ask for elevated rights</p>
+<p></p>
 <p>DISCLAIMER: As a free service there are no warranties produced and the service can be discontinued at any time</p>
 
 </body>
