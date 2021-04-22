@@ -78,7 +78,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>You can immediately delete your URL records by updating them with a From and To date in the past or leave them for a month after the To date to be automtically deleted<p>
 <p>You can update your URL records in the same way as you created them, and apart from the Shorturl field any of the others can be changed</p>
 <p>Your API Key will be automatically deleted 30 days after it was created</p>
-<p>As an enhancement I will add a data cleanup endpoint in the future</p>
+<p>If you want to delete all your URL entries you can using the following end point:</p>
+<code>
+  curl -d '{"email": "your email address used to create the api key"}' -H "Content-Type: application/json" -H "X-Api-Key: your-valid-api-key" -v -X POST localhost:8000/purge
+</code>
   
  
   
