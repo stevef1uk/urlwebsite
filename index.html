@@ -80,11 +80,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Your API Key will be automatically deleted 30 days after it was created</p>
 <p>If you want to delete all your URL entries you can using the following end point:</p>
 <code>
-  curl -d '{"email": "your email address used to create the api key"}' -H "Content-Type: application/json" -H "X-Api-Key: your-valid-api-key" -v -X POST localhost:8000/purge
+  
+  curl -d '{"email": "your email address used to create the api key"}' -H "Content-Type: application/json" -H "X-Api-Key: your-valid-api-key" -v -X POST https://url.sjfisher.com/purge
 </code>
   
- 
-  
+
 
 </body>
 </html>
